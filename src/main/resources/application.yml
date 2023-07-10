@@ -1,0 +1,32 @@
+server:
+  port: 9090
+spring:
+  
+  servlet:
+       multipart:
+        enabled: true 
+        max-request-size: 100MB
+        max-file-size: 100MB 
+  datasource:
+    url: jdbc:mysql://localhost:3306/Helpdeskdb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kvsubbu.db2@gmail.com
+    password: qwdvzkkfhycnyeoj
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
